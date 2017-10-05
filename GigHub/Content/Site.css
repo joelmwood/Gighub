@@ -23,7 +23,6 @@ textarea {
     max-width: 280px;
 }
 
-/**/
 span.field-validation-error {
     color: red;
     font-weight: bold;
@@ -56,6 +55,10 @@ span.field-validation-error {
 .dropdown-menu {
     box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+body{
+    font-size: 17px;
 }
 
 body,
@@ -92,8 +95,8 @@ h6,
 
 
 .btn{
-    font-size: 17px;
-    padding: 7px 20px;
+    /*font-size: 17px;
+    padding: 7px 20px;*/
     border-radius: 9px;
 }
 
