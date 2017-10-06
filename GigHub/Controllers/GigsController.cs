@@ -126,6 +126,8 @@ namespace GigHub.Controllers
             gig.DateTime = viewModel.GetDateTime();
             gig.GenreId = viewModel.Genre;
 
+            gig.Modify(viewModel.GetDateTime(), viewModel.Venue, viewModel.Genre);
+
             _context.SaveChanges();
 
             return RedirectToAction("Mine", "Gigs");
