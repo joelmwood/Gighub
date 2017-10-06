@@ -36,6 +36,9 @@ span.field-validation-error {
 .voffset5 { margin-top: 80px; }
 
 /*Bootstrap Overrides*/
+.popover{
+    box-shadow:none;
+}
 .navbar-inverse {
     background-color: #ff4342;
     border-color: #ff4342;
@@ -173,3 +176,21 @@ h6,
 .gigs > li:hover .actions{
     display:block;
 }
+.popover-notifications .popover-content{
+    padding:0;
+}
+.popover-notifications ul.notifications {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .popover-notifications ul.notifications > li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+        .popover-notifications ul.notifications > li:last-child {
+            border-bottom: none;
+        }
+        .popover-notifications ul.notifications .highlight {
+            font-weight: bold;
+        }
