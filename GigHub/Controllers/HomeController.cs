@@ -27,7 +27,8 @@ namespace GigHub.Controllers
             {
                 UpcomingGigs = upcomingGigs,
                 ShowActions = User.Identity.IsAuthenticated,
-                Heading = "Upcoming Gigs"
+                Heading = "Upcoming Gigs",
+                Title = "Home Page"
             };
 
             return View("Gigs", viewModel);
