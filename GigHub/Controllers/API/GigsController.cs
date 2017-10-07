@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
-namespace GigHub.Controllers.API
+namespace GigHub.Controllers.Api
 {
     [Authorize]
     public class GigsController : ApiController
@@ -24,7 +24,7 @@ namespace GigHub.Controllers.API
                 .Include(g => g.Attendances.Select(a => a.Attendee))
                 .Single(g => g.Id == id && g.ArtistId == userId);
 
-            if (gig.IsCancelled)
+            if (gig.IsCanceled)
                 return NotFound();
 
             gig.Cancel();

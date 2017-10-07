@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<GigHub.Models.Gig>
 @{
-    ViewBag.Title = "My Upcoming Gigs";
+    ViewBag.Title = "Mine";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -19,13 +19,13 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Venue                    
+                    @gig.Venue
                 </span>
                 <span class="genre">
                     @gig.Genre.Name
-                </span> 
+                </span>
                 <div class="actions">
-                    <a href="@Url.Action("Edit", "Gigs", new { id = gig.Id})">
+                    <a href="@Url.Action("Edit", "Gigs", new { id = gig.Id })">
                         Edit
                     </a> |
                     <a href="#" class="js-cancel-gig" data-gig-id="@gig.Id">
@@ -62,20 +62,19 @@
                                     url: "/api/gigs/" + link.attr("data-gig-id"),
                                     method: "DELETE"
                                 })
-                                    .done(function () {
-                                        link.parents("li").fadeOut(function () {
-                                            $(this).remove();
-                                        });
-                                    })
-                                    .fail(function () {
-                                        alert("Something failed!");
+                                .done(function () {
+                                    link.parents("li").fadeOut(function () {
+                                        $(this).remove();
                                     });
+                                })
+                                .fail(function () {
+                                    alert("Something failed!");
+                                });
                             }
                         }
                     }
                 });
             });
         });
-</script>
+    </script>
 }
-

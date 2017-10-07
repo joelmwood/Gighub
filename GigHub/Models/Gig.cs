@@ -10,22 +10,22 @@ namespace GigHub.Models
     {
         public int Id { get; set; }
 
-        public bool IsCancelled { get; private set; }
+        public bool IsCanceled { get; private set; }
 
         public ApplicationUser Artist { get; set; }
 
-        [Required()]
+        [Required]
         public string ArtistId { get; set; }
 
         public DateTime DateTime { get; set; }
 
-        [Required()]
+        [Required]
         [StringLength(255)]
         public string Venue { get; set; }
 
         public Genre Genre { get; set; }
 
-        [Required()]
+        [Required]
         public byte GenreId { get; set; }
 
         public ICollection<Attendance> Attendances { get; private set; }
@@ -37,9 +37,9 @@ namespace GigHub.Models
 
         public void Cancel()
         {
-            IsCancelled = true;
+            IsCanceled = true;
 
-            var notification = Notification.GigCancelled(this);
+            var notification = Notification.GigCanceled(this);
 
             foreach (var attendee in Attendances.Select(a => a.Attendee))
             {

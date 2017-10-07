@@ -12,32 +12,32 @@ namespace GigHub.ViewModels
     {
         public int Id { get; set; }
 
-        [Required()]
+        [Required]
         public string Venue { get; set; }
 
-        [Required()]
-        [FutureDate()]
+        [Required]
+        [FutureDate]
         public string Date { get; set; }
 
-        [Required()]
-        [ValidTime()]
+        [Required]
+        [ValidTime]
         public string Time { get; set; }
 
-        [Required()]
+        [Required]
         public byte Genre { get; set; }
 
         public IEnumerable<Genre> Genres { get; set; }
-
+        
         public string Heading { get; set; }
-
+        
         public string Action
         {
             get
             {
-                Expression<Func<GigsController, ActionResult>> update =
+                Expression<Func<GigsController, ActionResult>> update = 
                     (c => c.Update(this));
 
-                Expression<Func<GigsController, ActionResult>> create =
+                Expression<Func<GigsController, ActionResult>> create = 
                     (c => c.Create(this));
 
                 var action = (Id != 0) ? update : create;
@@ -49,6 +49,5 @@ namespace GigHub.ViewModels
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
-
     }
 }

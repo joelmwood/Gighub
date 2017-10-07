@@ -25,7 +25,7 @@ namespace GigHub.Controllers
                 .Where(g =>
                     g.ArtistId == userId &&
                     g.DateTime > DateTime.Now &&
-                    !g.IsCancelled)
+                    !g.IsCanceled)
                 .Include(g => g.Genre)
                 .ToList();
 

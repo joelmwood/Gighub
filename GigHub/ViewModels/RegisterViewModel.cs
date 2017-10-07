@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace GigHub.ViewModels
 {
@@ -20,7 +20,7 @@ namespace GigHub.ViewModels
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Required()]
+        [Required]
         [StringLength(100)]
         public string Name { get; set; }
     }
