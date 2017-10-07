@@ -42,9 +42,9 @@ namespace GigHub.Models
             return notification;
         }
 
-        public static Notification GigCancelled(Gig gig)
+        public static Notification GigCanceled(Gig gig)
         {
-            return new Notification(NotificationType.GigCancelled, gig);
+            return new Notification(NotificationType.GigCanceled, gig);
         }
     }
 }

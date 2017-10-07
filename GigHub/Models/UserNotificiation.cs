@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GigHub.Models
 {
-    public class UserNotificiation
+    public class UserNotification
     {
         [Key]
         [Column(Order = 1)]
@@ -20,11 +20,11 @@ namespace GigHub.Models
 
         public bool IsRead { get; private set; }
 
-        protected UserNotificiation()
+        protected UserNotification()
         {
         }
 
-        public UserNotificiation(ApplicationUser user, Notification notification)
+        public UserNotification(ApplicationUser user, Notification notification)
         {
             if (user == null)
                 throw new ArgumentNullException("user");
@@ -40,6 +40,5 @@ namespace GigHub.Models
         {
             IsRead = true;
         }
-
     }
 }
