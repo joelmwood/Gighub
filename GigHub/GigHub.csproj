@@ -261,6 +261,10 @@
     <Compile Include="Migrations\201710061739235_AddNotification.Designer.cs">
       <DependentUpon>201710061739235_AddNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710070118318_ChangeUserNotificationSpelling.cs" />
+    <Compile Include="Migrations\201710070118318_ChangeUserNotificationSpelling.Designer.cs">
+      <DependentUpon>201710070118318_ChangeUserNotificationSpelling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -390,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710061739235_AddNotification.resx">
       <DependentUpon>201710061739235_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710070118318_ChangeUserNotificationSpelling.resx">
+      <DependentUpon>201710070118318_ChangeUserNotificationSpelling.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
