@@ -28,12 +28,29 @@ span.field-validation-error {
     font-weight: bold;
 }
 
-.voffset { margin-top: 2px; }
-.voffset1 { margin-top: 5px; }
-.voffset2 { margin-top: 10px; }
-.voffset3 { margin-top: 20px; }
-.voffset4 { margin-top: 40px; }
-.voffset5 { margin-top: 80px; }
+.voffset {
+    margin-top: 2px;
+}
+
+.voffset1 {
+    margin-top: 5px;
+}
+
+.voffset2 {
+    margin-top: 10px;
+}
+
+.voffset3 {
+    margin-top: 20px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.voffset5 {
+    margin-top: 80px;
+}
 
 /* Bootstrap Overrides */
 .popover {
@@ -55,15 +72,15 @@ span.field-validation-error {
 }
 
 .navbar-inverse .notifications {
-    position: relative;    
+    position: relative;
 }
 
-    .navbar-inverse .notifications .badge {
-        position: absolute;
-        top: 8px;
-        right: -1px;
-        background: #a80a0a;
-    }
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+}
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: rgba(205, 40, 39, 0.55);
@@ -80,7 +97,7 @@ span.field-validation-error {
 }
 
 .navbar-brand {
-    font-weight: 700;    
+    font-weight: 700;
 }
 
 body {
@@ -116,7 +133,7 @@ h6,
     -webkit-transition: none;
 }
 
-.form-control:focus{
+.form-control:focus {
     box-shadow: none;
 }
 
@@ -133,7 +150,7 @@ h6,
 
     > li {
         position: relative;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         .date {
             background: red;
@@ -161,7 +178,7 @@ h6,
         .details {
             position: absolute;
             top: 0;
-            left: 70px;    
+            left: 70px;
 
             .artist {
                 font-weight: bold;
@@ -169,7 +186,9 @@ h6,
             }
 
             .genre {
-                font-size: 15px;
+                font-size: 14px;
+                display: block;
+                margin-bottom: 4px;
             }
         }
 
@@ -186,7 +205,7 @@ h6,
 
 .popover-notifications {
     .popover-content {
-        padding: 0;    
+        padding: 0;
     }
 
     ul.notifications {
@@ -198,7 +217,7 @@ h6,
             padding: 10px;
         }
 
-         > li:last-child {
+        > li:last-child {
             border-bottom: none;
         }
 
@@ -210,7 +229,7 @@ h6,
 
 #searchGigs {
     width: 400px;
-    
+
     input {
         max-width: none;
     }
