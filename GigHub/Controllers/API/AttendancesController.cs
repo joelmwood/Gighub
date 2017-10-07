@@ -1,8 +1,8 @@
-﻿using GigHub.Dtos;
-using GigHub.Models;
-using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
+using GigHub.Dtos;
+using GigHub.Models;
+using Microsoft.AspNet.Identity;
 
 namespace GigHub.Controllers.Api
 {
@@ -29,12 +29,10 @@ namespace GigHub.Controllers.Api
                 GigId = dto.GigId,
                 AttendeeId = userId
             };
-
             _context.Attendances.Add(attendance);
             _context.SaveChanges();
 
             return Ok();
         }
-
     }
 }

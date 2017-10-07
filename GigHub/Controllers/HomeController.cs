@@ -26,9 +26,10 @@ namespace GigHub.Controllers
             if (!String.IsNullOrWhiteSpace(query))
             {
                 upcomingGigs = upcomingGigs
-                    .Where(g => g.Artist.Name.Contains(query) ||
-                              g.Genre.Name.Contains(query) ||
-                              g.Venue.Contains(query));
+                    .Where(g =>
+                            g.Artist.Name.Contains(query) ||
+                            g.Genre.Name.Contains(query) ||
+                            g.Venue.Contains(query));
             }
 
             var viewModel = new GigsViewModel
@@ -36,7 +37,6 @@ namespace GigHub.Controllers
                 UpcomingGigs = upcomingGigs,
                 ShowActions = User.Identity.IsAuthenticated,
                 Heading = "Upcoming Gigs",
-                Title = "Home Page",
                 SearchTerm = query
             };
 

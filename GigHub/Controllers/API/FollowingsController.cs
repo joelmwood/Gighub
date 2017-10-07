@@ -1,8 +1,8 @@
-﻿using GigHub.Dtos;
-using GigHub.Models;
-using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
+using GigHub.Dtos;
+using GigHub.Models;
+using Microsoft.AspNet.Identity;
 
 namespace GigHub.Controllers.Api
 {
@@ -13,7 +13,7 @@ namespace GigHub.Controllers.Api
 
         public FollowingsController()
         {
-            _context = new ApplicationDbContext();
+            _context = new ApplicationDbContext();    
         }
 
         [HttpPost]
