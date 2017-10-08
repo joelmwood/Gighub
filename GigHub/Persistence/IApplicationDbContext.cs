@@ -1,5 +1,5 @@
-﻿using System.Data.Entity;
-using GigHub.Core.Models;
+﻿using GigHub.Core.Models;
+using System.Data.Entity;
 
 namespace GigHub.Persistence
 {
